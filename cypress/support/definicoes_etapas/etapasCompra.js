@@ -56,7 +56,3 @@ When("o usuário clica no botão {string} ao lado do produto", (buttonText) => {
 Then("o produto é removido do carrinho", () => {
   cy.get('b').should('contain.text', 'O seu carrinho está vazio.');
 });
-
-
-
-
