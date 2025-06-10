@@ -20,7 +20,12 @@ jobs:
           node-version: '18'
 
       - name: Instalar dependências
-        run: npm install
+        run: npm ci
+
+      - name: Verificar permissões dos scripts
+        run: |
+          chmod +x node_modules/.bin/cypress
+          chmod -R 755 node_modules/cypress
 
       - name: Criar arquivo de ambiente (cypress.env.json)
         run: |
@@ -33,10 +38,13 @@ jobs:
         run: npm run cy:run:allure
 
       - name: Gerar relatório Allure
+        if: always()
         run: npm run allure:generate
 
       - name: Upload do relatório Allure como artefato
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: allure-report
+          retention-days: 30
