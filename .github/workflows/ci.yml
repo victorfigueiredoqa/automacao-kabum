@@ -36,6 +36,15 @@ jobs:
 
       - name: Rodar testes Cypress com Allure
         run: npm run cy:run:allure
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Configurações para melhorar a performance no CI
+          CYPRESS_defaultCommandTimeout: 10000
+          CYPRESS_pageLoadTimeout: 120000
+          CYPRESS_requestTimeout: 10000
+          # Desativar vídeo para melhorar a performance
+          CYPRESS_video: false
 
       - name: Gerar relatório Allure
         if: always()
