@@ -17,7 +17,7 @@ module.exports = defineConfig({
 
       on("file:preprocessor", bundler);
       await addCucumberPreprocessorPlugin(on, config, {
-        stepDefinitions: "cypress/e2e/definicoes_etapas/**/*.js", // Mudança aqui
+        stepDefinitions: "cypress/e2e/definicoes_etapas/**/*.js",
       });
 
       allureWriter(on, config);

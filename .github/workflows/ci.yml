@@ -57,3 +57,18 @@ jobs:
           name: allure-report
           path: allure-report
           retention-days: 30
+
+          # Acrescentei daqui pra baixo
+      - name: Upload Allure results
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure-results
+          path: allure-results
+          retention-days: 30
+
+      - name: Upload Cypress screenshots
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+          retention-days: 30

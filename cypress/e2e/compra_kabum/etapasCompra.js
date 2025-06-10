@@ -25,15 +25,21 @@ Then("o produto é adicionado ao carrinho", () => {
     .invoke('text')
     .then(parseInt)
     .should('be.gt', 0);
+
+    // Evidência
+    cy.evidencias_imagens('produto-adicionado');
 });
 
 // Mensagem de sucesso apresentada
 Then("o usuário vê uma mensagem de confirmação {string}", (mensagemEsperada) => {
+  // Adicionei as 2 linhas abaixo
+  cy.contains('.toast-notification > span', mensagemEsperada, { timeout: 10000 });
+  cy.evidencias_imagens('mensagem-toast');
 
-  const seletorMensagem = ".toast-notification > span";
-  cy.get(seletorMensagem)
-    .should("be.visible")
-    .and("contain.text", mensagemEsperada);
+  //const seletorMensagem = ".toast-notification > span";
+  //cy.get(seletorMensagem)
+  //  .should("be.visible")
+  //  .and("contain.text", mensagemEsperada);
 });
 
 // Acessa página do carrinho

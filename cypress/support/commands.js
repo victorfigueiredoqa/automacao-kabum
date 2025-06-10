@@ -14,3 +14,9 @@ Cypress.Commands.add("login", (usuario = Cypress.env("USUARIO_KABUM"), senha = C
     cy.get('#linkMinhaContaHeader', { timeout: 20000 }).should('exist');
     cy.get('#linkMinhaContaHeader').contains('Víctor').should('be.visible');
 });
+
+Cypress.Commands.add('evidencias_imagens', (name) => {
+  cy.screenshot(name).then(() => {
+    cy.allure().fileAttachment(`${name}.png`, 'image/png');
+  });
+});
