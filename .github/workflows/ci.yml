@@ -1,0 +1,42 @@
+name: Pipeline Cypress CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  cypress-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Criar arquivo de ambiente (cypress.env.json)
+        run: |
+          echo '{
+            "USUARIO_KABUM": "${{ secrets.USUARIO_KABUM }}",
+            "SENHA_KABUM": "${{ secrets.SENHA_KABUM }}"
+          }' > cypress.env.json
+
+      - name: Rodar testes Cypress com Allure
+        run: npm run cy:run:allure
+
+      - name: Gerar relatório Allure
+        run: npm run allure:generate
+
+      - name: Upload do relatório Allure como artefato
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: allure-report
