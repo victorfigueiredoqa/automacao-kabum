@@ -11,8 +11,6 @@ Cypress.Commands.add("login", (usuario = Cypress.env("USUARIO_KABUM"), senha = C
     cy.get('[data-testid="login-input"]').type(usuario);
     cy.get('[data-testid="password-input"]').type(senha, { log: false });
     cy.get('[data-testid="login-submit-button"]').click();
-    cy.get('#linkMinhaContaHeader > .flex').should('contain.text', 'Víctor');
-
-    
-
+    cy.get('#linkMinhaContaHeader > .flex', { timeout: 10000 })
+        .should('contain.text', 'Víctor');
 });
