@@ -2,10 +2,6 @@
   "name": "automacao-kabum-cypress",
   "version": "1.0.0",
   "main": "index.js",
-  "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true,
-    "stepDefinitions": "cypress/support/definicoes_etapas/**/*.js"
-  },
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run",

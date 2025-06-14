@@ -1,2 +1,6 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+<<<<<<< HEAD
 "","49005","Efetuar uma compra e remover do carrinho","","Thu Jun 05 08:32:34 BRT 2025","passed","Thu Jun 05 08:33:23 BRT 2025","","Gerenciamento de Carrinho de Compras no site Kabum","",""
+=======
+"","69290","Efetuar uma compra e remover do carrinho","","Tue Jun 10 14:00:38 BRT 2025","passed","Tue Jun 10 14:01:47 BRT 2025","","Gerenciamento de Carrinho de Compras no site Kabum","",""
+>>>>>>> bbbd74901d36b55d2dea84c5a885f3096dfeeb7b

@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 [{"uid":"e26ce67efe033820","name":"Efetuar uma compra e remover do carrinho","time":{"start":1749123154418,"stop":1749123203423,"duration":49005},"status":"passed","severity":"normal"}]
+=======
+[{"uid":"74e27aa0b0325b54","name":"Efetuar uma compra e remover do carrinho","time":{"start":1749574838298,"stop":1749574907588,"duration":69290},"status":"passed","severity":"normal"}]
+>>>>>>> bbbd74901d36b55d2dea84c5a885f3096dfeeb7b

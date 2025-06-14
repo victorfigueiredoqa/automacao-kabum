@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"5f933508651a6f988a41a455047a940e":{"statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1},"items":[{"uid":"e26ce67efe033820","status":"passed","time":{"start":1749123154418,"stop":1749123203423,"duration":49005}}]}}
+=======
+{"5f933508651a6f988a41a455047a940e":{"statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1},"items":[{"uid":"74e27aa0b0325b54","status":"passed","time":{"start":1749574838298,"stop":1749574907588,"duration":69290}}]}}
+>>>>>>> bbbd74901d36b55d2dea84c5a885f3096dfeeb7b

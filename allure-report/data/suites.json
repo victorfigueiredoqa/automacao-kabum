@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"uid":"98d3104e051c652961429bf95fa0b5d6","name":"suites","children":[{"name":"Gerenciamento de Carrinho de Compras no site Kabum","children":[{"name":"Efetuar uma compra e remover do carrinho","uid":"e26ce67efe033820","parentUid":"a362314d9006e2f684a3ab98760a1ef6","status":"passed","time":{"start":1749123154418,"stop":1749123203423,"duration":49005},"flaky":false,"newFailed":false,"newPassed":false,"newBroken":false,"retriesCount":2,"retriesStatusChange":false,"parameters":[],"tags":[]}],"uid":"a362314d9006e2f684a3ab98760a1ef6"}]}
+=======
+{"uid":"98d3104e051c652961429bf95fa0b5d6","name":"suites","children":[{"name":"Gerenciamento de Carrinho de Compras no site Kabum","children":[{"name":"Efetuar uma compra e remover do carrinho","uid":"74e27aa0b0325b54","parentUid":"a362314d9006e2f684a3ab98760a1ef6","status":"passed","time":{"start":1749574838298,"stop":1749574907588,"duration":69290},"flaky":false,"newFailed":false,"newPassed":false,"newBroken":false,"retriesCount":12,"retriesStatusChange":true,"parameters":[],"tags":[]}],"uid":"a362314d9006e2f684a3ab98760a1ef6"}]}
+>>>>>>> bbbd74901d36b55d2dea84c5a885f3096dfeeb7b
