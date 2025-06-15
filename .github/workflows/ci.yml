@@ -1,6 +1,10 @@
 name: Pipeline Cypress CI
 
 on:
+  workflow_dispatch:
+    inputs:
+      run_tests:
+        description: 'Executar testes Cypress'
   push:
     branches: [ main ]
   pull_request:
